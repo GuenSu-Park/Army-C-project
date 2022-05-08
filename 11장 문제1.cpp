@@ -24,15 +24,15 @@ int main() {
 	
 	printf("학생들의 등수를 보여주겠습니다. \n");
 	for (i=0; i<10; i++){
-		printf("%d등: ",i+1);
-		for (j=1; j<10; j++){
+		printf("%d등:",i+1);
+		for (j=i+1; j<10; j++){
 			if (arr[i]<arr[j]){
 				blank[0]=arr[i];
 				arr[i]=arr[j];
 				arr[j]=blank[0];
 			}
 		}
-		printf("(%d) \n",arr[i]);
+		printf("%d \n",arr[i]);
 	}
 	return 0;
 }
